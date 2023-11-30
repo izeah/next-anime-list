@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    build:
+      context: . # Lokasi Dockerfile dan proyek
+      dockerfile: Dockerfile # Nama Dockerfile yang digunakan
+    ports:
+      - "3000:3000" # Meneruskan port 3000 pada host ke port 3000 pada container
+    environment:
+      - NODE_ENV=production # Set NODE_ENV ke production
