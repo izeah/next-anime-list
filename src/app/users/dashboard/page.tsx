@@ -27,6 +27,12 @@ export default async function Page() {
         >
           My Comment
         </Link>
+        <Link
+          href="/users/dashboard/rating"
+          className="bg-color-accent text-color-dark font-bold px-4 py-3 text-xl"
+        >
+          My Rating
+        </Link>
       </div>
     </div>
   );

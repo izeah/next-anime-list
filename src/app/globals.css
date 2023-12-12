@@ -29,6 +29,7 @@ img:hover {
   background: conic-gradient(#0000 10%, #ffc639);
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 16px), #000 0);
   animation: s3 1s infinite linear;
+  -webkit-animation: s3 1s infinite linear;
 }
 @keyframes s3 {
   to {

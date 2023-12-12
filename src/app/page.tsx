@@ -26,16 +26,14 @@ export default async function Page() {
       </section>
 
       {/* Recommendation Anime */}
-      {recommendedAnimeData?.length > 0 && (
-        <section>
-          <Header
-            title="Rekomendasi Anime"
-            linkHref="/recommendation"
-            linkTitle="Lihat Semua"
-          />
-          <AnimeList data={recommendedAnimeData} />
-        </section>
-      )}
+      <section>
+        <Header
+          title="Rekomendasi Anime"
+          linkHref="/recommendation"
+          linkTitle="Lihat Semua"
+        />
+        <AnimeList data={recommendedAnimeData.data} />
+      </section>
     </>
   );
 }
