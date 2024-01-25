@@ -1,11 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { PiStarBold, PiStarFill } from "react-icons/pi";
-
-const starEmptyIcon = <PiStarBold className="text-color-primary" size={36} />;
-
-const starFullIcon = <PiStarFill className="text-color-accent" size={36} />;
 
 const StarRatingScore = ({
   count,
@@ -22,6 +19,11 @@ const StarRatingScore = ({
   isAlreadyRated: boolean;
   ratingValue?: number;
 }) => {
+  const starEmptyIcon = <PiStarBold className="text-color-primary" size={36} />;
+  const starFullIcon = <PiStarFill className="text-color-accent" size={36} />;
+
+  const router = useRouter();
+
   const [value, setValue] = useState<number | undefined>(undefined);
   const [hoverValue, setHoverValue] = useState<number | undefined>(undefined);
 
@@ -48,6 +50,7 @@ const StarRatingScore = ({
       });
       const responseData = await response.json();
       console.log("😎 response data :", responseData);
+      router.refresh();
     };
   };
 
