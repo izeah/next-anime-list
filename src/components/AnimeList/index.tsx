@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function AnimeList({ data }: Readonly<{ data: IAnimeData[] }>) {
   return (
     <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 px-4">
-      {data.map((item: IAnimeData) => {
+      {data?.map((item: IAnimeData) => {
         return (
           <div key={item.mal_id} className="shadow-2xl rounded-3xl relative">
             <Link
